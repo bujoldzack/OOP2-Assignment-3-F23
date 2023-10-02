@@ -14,7 +14,7 @@ public class DeckController {
     @FXML
     private Label aScoreLabel;
 
-    private final Deck aDeck = new Deck();
+    private final Deck aDeck = Deck.instance();
 
     private final Hand aHand = new Hand();
 
