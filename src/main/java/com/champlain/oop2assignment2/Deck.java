@@ -7,6 +7,8 @@ import java.util.List;
 
 public class Deck extends CardCollection implements CardSource {
     private final List<Card> aCards = new ArrayList<Card>();
+    private ScoringStrategy scoringStrategy = new SimpleCountStrategy();
+
     private static final Deck INSTANCE = new Deck();
 
     private Deck() {
@@ -23,6 +25,23 @@ public class Deck extends CardCollection implements CardSource {
 
     public void shuffle() {
         Collections.shuffle(this.aCards);
+    }
+
+    /**
+     * Calculate the score of the list using the scoringStrategy.
+     * @param cards list of cards.
+     * @return the calculate score.
+     */
+    public int calculateScore(List<Card> cards) {
+        return scoringStrategy.calculateScore(cards);
+    }
+
+    /**
+     * Set new scoring strategy.
+     * @param strategy change scoringStrategy.
+     */
+    public void setScoringStrategy(ScoringStrategy strategy) {
+        this.scoringStrategy = strategy;
     }
 
     public Card draw() {
