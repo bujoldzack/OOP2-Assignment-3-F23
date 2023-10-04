@@ -22,4 +22,11 @@ public class Hand extends CardCollection {
     public Iterator<Card> iterator() {
         return this.aCards.iterator();
     }
+
+    /**
+     * method that uses the SuitFirstComparator class to sort the deck by suit first
+     */
+    public void sortBySuitFirst(){
+        aCards.sort(new SuitFirstComparator());
+    }
 }
