@@ -4,6 +4,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class DeckController {
     @FXML
     private TextArea aDeckTextArea;
@@ -28,9 +31,15 @@ public class DeckController {
         this.displayCardCollections();
     }
 
+    /**
+     * calls upon the sortBySuitFirst to sort the cards in the deck and hand by suit first.
+     * then the second method displays them.
+     */
     @FXML
     protected void onSortButtonClick() {
-        aDeckTextArea.setText("This does not sort anything yet.");
+        this.aHand.sortBySuitFirst();
+        this.aDeck.sortBySuitFirst();
+        this.displayCardCollections();
     }
 
     @FXML
