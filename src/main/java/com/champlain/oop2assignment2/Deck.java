@@ -34,4 +34,11 @@ public class Deck extends CardCollection implements CardSource {
     public Iterator<Card> iterator() {
         return this.aCards.iterator();
     }
+
+    /**
+     *  uses the RankFirstComparator to sort the deck by rank first.
+     */
+    public void sortByRankFirst(){
+        aCards.sort(new RankFirstComparator());
+    }
 }

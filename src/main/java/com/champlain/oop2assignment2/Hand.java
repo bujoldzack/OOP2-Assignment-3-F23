@@ -22,4 +22,11 @@ public class Hand extends CardCollection {
     public Iterator<Card> iterator() {
         return this.aCards.iterator();
     }
+
+    /**
+     * uses the RankFirstComparator to sort the hand by rank first.
+     */
+    public void sortByRankFirst(){
+        aCards.sort(new RankFirstComparator());
+    }
 }
