@@ -18,6 +18,9 @@ public class DeckController {
     @FXML
     private Label aScoreLabel;
 
+    /**
+     * Instance of a Deck with the Singleton pattern.
+     */
     private final Deck aDeck = Deck.instance();
 
     private final Hand aHand = new Hand();
@@ -43,9 +46,14 @@ public class DeckController {
         this.displayCardCollections();
     }
 
+    /**
+     * Sets the aScoreLabel to the number of cards in hand.
+     */
     @FXML
     protected void onScoreButtonClick() {
-        aScoreLabel.setText("Not implemented.");
+        aDeck.setScoringStrategy(new SimpleCountStrategy());
+        int score = aDeck.calculateScore(aHand.getCards());
+        aScoreLabel.setText(String.valueOf(score));
     }
 
     @FXML

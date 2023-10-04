@@ -35,4 +35,12 @@ public class Hand extends CardCollection {
     public void sortByRankFirst(){
         aCards.sort(new RankFirstComparator());
     }
+
+    /**
+     * Used ChatGPT for this one.
+     * Was not able to get the cards in the DeckController without this method.
+     */
+    public List<Card> getCards() {
+        return Collections.unmodifiableList(aCards);
+    }
 }
