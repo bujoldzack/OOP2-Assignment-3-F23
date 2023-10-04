@@ -1,5 +1,6 @@
 package com.champlain.oop2assignment2;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -58,5 +59,15 @@ public class DeckController {
     private void displayCardCollections () {
         this.aDeckTextArea.setText(this.aDeck.toString());
         this.aHandTextArea.setText(this.aHand.toString());
+    }
+
+    /**
+     * calls upon the methods to compare the cards and displays them.
+     */
+    @FXML
+    protected void onSortByRankClick() {
+        this.aHand.sortByRankFirst();
+        this.aDeck.sortByRankFirst();
+        this.displayCardCollections();
     }
 }

@@ -46,5 +46,11 @@ public class Deck extends CardCollection implements CardSource {
     public void sortBySuitFirst(){
         aCards.sort(new SuitFirstComparator());
     }
+     /**
+     *  uses the RankFirstComparator to sort the deck by rank first.
+     */
+    public void sortByRankFirst(){
+        aCards.sort(new RankFirstComparator());
+    }
 
 }

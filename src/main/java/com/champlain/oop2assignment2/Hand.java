@@ -29,4 +29,10 @@ public class Hand extends CardCollection {
     public void sortBySuitFirst(){
         aCards.sort(new SuitFirstComparator());
     }
+    /**
+    * uses the RankFirstComparator to sort the hand by rank first.
+    */
+    public void sortByRankFirst(){
+        aCards.sort(new RankFirstComparator());
+    }
 }
