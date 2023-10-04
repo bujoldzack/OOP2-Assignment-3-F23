@@ -39,7 +39,6 @@ public class Hand extends CardCollection {
     /**
      * Used ChatGPT for this one.
      * Was not able to get the cards in the DeckController without this method.
-     * @return aCards
      */
     public List<Card> getCards() {
         return Collections.unmodifiableList(aCards);

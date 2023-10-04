@@ -19,6 +19,10 @@ public class Deck extends CardCollection implements CardSource {
         }
     }
 
+    /**
+     * Singleton Pattern.
+     * @return instance
+     */
     public static Deck instance() {
         return INSTANCE;
     }

@@ -18,6 +18,9 @@ public class DeckController {
     @FXML
     private Label aScoreLabel;
 
+    /**
+     * Instance of a Deck with the Singleton pattern.
+     */
     private final Deck aDeck = Deck.instance();
 
     private final Hand aHand = new Hand();

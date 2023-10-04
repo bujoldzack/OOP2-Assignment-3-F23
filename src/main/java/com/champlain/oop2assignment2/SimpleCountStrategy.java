@@ -8,7 +8,6 @@ import java.util.List;
 public class SimpleCountStrategy implements ScoringStrategy {
 
     /**
-     * @param cards parameter
      * @return the number of cards.
      */
     @Override
